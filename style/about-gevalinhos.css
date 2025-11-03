@@ -71,7 +71,7 @@
 .card-image {
   width: 100%;
   height: 220px;
-  background-color: var(--green-moss);
+  background-color: var(--purple-primary);
   overflow: hidden;
   flex-shrink: 0;
 }

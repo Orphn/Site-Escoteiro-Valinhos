@@ -45,6 +45,24 @@
   fill: var(--white);
 }
 
+/* Divider da Evolução e Calendario */
+.custom-shape-divider-bottom-1762193737 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.custom-shape-divider-bottom-1762193737 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+}
+
+.custom-shape-divider-bottom-1762193737 .shape-fill {
+  fill: var(--green-moss);
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .custom-shape-divider-bottom-1762155031 svg {
@@ -55,7 +73,7 @@
     height: 50px;
   }
 
-  .custom-shape-divider-bottom-1762158076 svg {
+  .custom-shape-divider-bottom-1762193737 svg {
     height: 40px;
   }
 }
@@ -69,7 +87,7 @@
     height: 40px;
   }
 
-  .custom-shape-divider-bottom-1762158076 svg {
+  .custom-shape-divider-bottom-1762193737 svg {
     height: 35px;
   }
 }

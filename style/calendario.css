@@ -7,7 +7,7 @@
 .calendario-title {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--purple-primary);
+  color: var(--purple-dark);
   text-align: center;
   margin: 0 0 60px;
   text-transform: capitalize;
@@ -23,7 +23,7 @@
 }
 
 .evento-card {
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  background: linear-gradient(135deg, #e0e0e0 0%, #e0e0e0 100%);
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -123,22 +123,6 @@
 .link-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(74, 45, 91, 0.4);
-}
-
-.link-card.paxtu {
-  background: linear-gradient(
-    135deg,
-    var(--purple-primary) 0%,
-    var(--purple-dark) 100%
-  );
-}
-
-.link-card.mappa {
-  background: linear-gradient(135deg, #4a2d5b 0%, #5a3d6b 100%);
-}
-
-.link-card.associacoes {
-  background: linear-gradient(135deg, #5a2d5b 0%, #6a3d6b 100%);
 }
 
 .link-content {

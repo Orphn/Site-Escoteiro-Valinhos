@@ -1,5 +1,5 @@
 .hero-section {
-  height: 100vh;
+  height: 120vh;
   background-image: url("../img/hero-img.jpg");
   background-size: cover;
   background-position: center;
@@ -35,11 +35,11 @@
 
 .hero-title {
   color: var(--white);
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
