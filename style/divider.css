@@ -1,0 +1,75 @@
+/* Divider entre Hero e About */
+.custom-shape-divider-bottom-1762155031 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 1;
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
+.custom-shape-divider-bottom-1762155031 svg {
+  position: relative;
+  display: block;
+  width: calc(133% + 1.3px);
+  height: 55px;
+}
+
+.custom-shape-divider-bottom-1762155031 .shape-fill {
+  fill: var(--white);
+}
+
+/* Divider do GE Valinhos */
+.custom-shape-divider-top-1762154312 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+
+.custom-shape-divider-top-1762154312 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.custom-shape-divider-top-1762154312 .shape-fill {
+  fill: var(--white);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .custom-shape-divider-bottom-1762155031 svg {
+    height: 45px;
+  }
+
+  .custom-shape-divider-top-1762154312 svg {
+    height: 50px;
+  }
+
+  .custom-shape-divider-bottom-1762158076 svg {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-shape-divider-bottom-1762155031 svg {
+    height: 35px;
+  }
+
+  .custom-shape-divider-top-1762154312 svg {
+    height: 40px;
+  }
+
+  .custom-shape-divider-bottom-1762158076 svg {
+    height: 35px;
+  }
+}

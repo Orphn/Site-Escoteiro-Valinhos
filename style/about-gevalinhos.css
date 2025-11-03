@@ -1,0 +1,298 @@
+.ge-valinhos-section {
+  height: auto;
+  background-color: var(--green-moss);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 40px 100px 40px;
+}
+
+.ge-title {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+/* Container do Carousel */
+.carousel-container {
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  padding: 25px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease;
+  padding: 10px 0;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-track:active {
+  cursor: grabbing;
+}
+
+/* Cards do Carousel */
+.carousel-card {
+  min-width: calc((100% - 80px) / 3);
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: fit-content;
+  min-height: 500px;
+  max-height: calc(100vh - 30px);
+}
+
+.carousel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  background-color: var(--green-moss);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text {
+  padding: 25px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Estilização da Scrollbar para os cards */
+.card-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+  background: var(--purple-primary);
+  border-radius: 10px;
+}
+
+.card-text::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-dark);
+}
+
+/* Para Firefox */
+.card-text {
+  scrollbar-width: thin;
+  scrollbar-color: var(--purple-primary) #f1f1f1;
+}
+
+.card-text h3 {
+  color: var(--purple-primary);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.card-text p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Setas de Navegação */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--purple-primary);
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--white);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background-color: var(--purple-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-left {
+  left: 30px;
+}
+
+.carousel-arrow-right {
+  right: 30px;
+}
+
+/* Dots de Navegação */
+.carousel-dots {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--white);
+  width: 40px;
+  border-radius: 6px;
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .carousel-card {
+    min-width: calc((100% - 40px) / 2);
+    max-height: calc(100vh - 300px);
+  }
+
+  .ge-title {
+    font-size: 3.5rem;
+    margin-bottom: 35px;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ge-valinhos-section {
+    padding: 90px 20px 70px 20px;
+  }
+
+  .ge-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .carousel-card {
+    min-width: 100%;
+    max-height: calc(100vh - 280px);
+  }
+
+  .carousel-track {
+    gap: 20px;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+
+  .card-text {
+    padding: 20px 25px 25px 25px;
+    gap: 10px;
+  }
+
+  .card-text h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-text p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .carousel-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-arrow svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .carousel-arrow-left {
+    left: 15px;
+  }
+
+  .carousel-arrow-right {
+    right: 15px;
+  }
+
+  .carousel-dots {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ge-valinhos-section {
+    padding: 80px 15px 60px 15px;
+  }
+
+  .ge-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .card-text {
+    padding: 18px 20px 22px 20px;
+  }
+
+  .card-text h3 {
+    font-size: 1.15rem;
+  }
+
+  .card-text p {
+    font-size: 0.9rem;
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .carousel-card {
+    max-height: calc(100vh - 260px);
+  }
+}
