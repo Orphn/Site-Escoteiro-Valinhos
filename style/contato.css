@@ -1,0 +1,267 @@
+.contato-section {
+	position: relative;
+	background: var(--white);
+	padding: 80px 20px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contato-container {
+	max-width: 1400px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 400px;
+	gap: 60px;
+	align-items: start;
+}
+
+.contato-left {
+	color: var(--purple-dark);
+}
+
+.contato-title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin-bottom: 20px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+	color: var(--purple-dark);
+}
+
+.contato-subtitle {
+	font-size: 1.2rem;
+	margin-bottom: 40px;
+	color: #666;
+	line-height: 1.6;
+}
+
+.contato-address {
+	background: var(--purple-primary);
+	color: var(--white);
+	border-radius: 20px;
+	padding: 30px;
+	margin-bottom: 30px;
+	line-height: 1.8;
+	font-size: 1.1rem;
+	box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.info-header {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.info-icon {
+	width: 50px;
+	height: 50px;
+	background: var(--white);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+}
+
+.info-title {
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin: 0;
+	color: var(--white);
+	text-transform: uppercase;
+}
+
+.info-content {
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+.contato-right {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.info-item {
+	background: var(--purple-primary);
+	color: var(--white);
+	border-radius: 20px;
+	padding: 25px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+.info-item:hover {
+	transform: translateX(10px);
+	background: var(--purple-dark);
+}
+
+.info-item-icon {
+	width: 60px;
+	height: 60px;
+	background: var(--white);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.8rem;
+	flex-shrink: 0;
+}
+
+.info-item-text {
+	flex: 1;
+}
+
+.info-item-label {
+	font-size: 0.9rem;
+	opacity: 0.9;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.info-item-value {
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.contato-qrcode {
+	background: var(--purple-primary);
+	border-radius: 20px;
+	padding: 40px;
+	text-align: center;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	position: sticky;
+	box-shadow: 0 5px 3px 2px rgba(0, 0, 0, 0.3);
+	top: 100px;
+}
+
+.qrcode-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	line-height: 1.3;
+}
+
+.qrcode-container {
+	background: var(--white);
+	border-radius: 15px;
+	padding: 25px;
+	margin-bottom: 25px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.qrcode-container img {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+}
+
+.qrcode-placeholder {
+	width: 200px;
+	height: 200px;
+	background: #f0f0f0;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	color: #ccc;
+}
+
+.qrcode-description {
+	font-size: 1rem;
+	line-height: 1.6;
+	opacity: 0.95;
+}
+
+.social-links {
+	display: flex;
+	gap: 20px;
+	margin-top: 30px;
+	flex-wrap: wrap;
+}
+
+.social-link {
+	width: 50px;
+	height: 50px;
+	background: var(--purple-primary);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--white);
+	transition: all 0.3s ease;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+
+.social-link:hover {
+	background: var(--purple-dark);
+	transform: translateY(-5px);
+}
+
+@media (max-width: 968px) {
+	.contato-container {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.contato-title {
+		font-size: 2.5rem;
+	}
+
+	.contato-qrcode {
+		position: static;
+	}
+
+	.footer-content {
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+	}
+
+	.footer-brand {
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 576px) {
+	.contato-section {
+		padding: 60px 20px;
+	}
+
+	.contato-title {
+		font-size: 2rem;
+	}
+
+	.info-item {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-content {
+		grid-template-columns: 1fr;
+	}
+
+	.social-links {
+		justify-content: center;
+	}
+}
