@@ -95,7 +95,9 @@ function createGaleriaItem(item, index) {
   } else if (item.type === "video") {
     mediaHTML = `
       <div class="galeria-media">
-        <img src="${item.thumbnail || item.src}" alt="${item.title}" onerror="this.parentElement.innerHTML='<div class=\\'placeholder\\'>Vídeo não disponível</div>'">
+        <img src="${item.thumbnail || item.src}" alt="${
+      item.title
+    }" onerror="this.parentElement.innerHTML='<div class=\\'placeholder\\'>Vídeo não disponível</div>'">
         <div class="video-overlay" onclick="openVideoModal(${index})">
           <div class="play-icon">
             <svg viewBox="0 0 24 24">
