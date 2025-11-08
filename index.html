@@ -1,651 +1,802 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Grupo Escoteiro Valinhos - 252°/SP</title>
-		<link rel="stylesheet" href="style/global.css" />
-		<link rel="stylesheet" href="style/header.css" />
-		<link rel="stylesheet" href="style/hero.css" />
-		<link rel="stylesheet" href="style/about-escotismo.css" />
-		<link rel="stylesheet" href="style/about-gevalinhos.css" />
-		<link rel="stylesheet" href="style/divider.css" />
-		<link rel="stylesheet" href="style/evolucao.css" />
-		<link rel="stylesheet" href="style/calendario.css" />
-		<link rel="stylesheet" href="style/galeria.css" />
-		<link rel="stylesheet" href="style/contato.css" />
-		<link rel="stylesheet" href="style/galeria.css" />
-		<link rel="stylesheet" href="style/footer.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo Escoteiro Valinhos - 252°/SP</title>
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/hero.css" />
+    <link rel="stylesheet" href="style/about-escotismo.css" />
+    <link rel="stylesheet" href="style/about-gevalinhos.css" />
+    <link rel="stylesheet" href="style/divider.css" />
+    <link rel="stylesheet" href="style/galeria.css" />
+    <link rel="stylesheet" href="style/doacao.css" />
+    <link rel="stylesheet" href="style/redes.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/evolucao.css" />
+    <link rel="stylesheet" href="style/calendario.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-bar">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#about" class="nav-link">Sobre o Escotismo</a>
+        <a href="#ge-valinhos" class="nav-link">GE Valinhos</a>
+        <a href="#evolucao" class="nav-link">Evolução</a>
+        <a href="#calendario" class="nav-link">Calendário</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#doacao" class="nav-link">Doação</a>
+        <a href="#redes" class="nav-link">Redes Sociais</a>
+      </nav>
+    </header>
 
-	<body>
-		<header class="header">
-			<nav class="header-bar">
-				<a href="#hero" class="nav-link active">Início</a>
-				<a href="#about" class="nav-link">Sobre o Escotismo</a>
-				<a href="#ge-valinhos" class="nav-link">GE Valinhos</a>
-				<a href="#evolucao" class="nav-link">Evolução</a>
-				<a href="#calendario" class="nav-link">Calendário</a>
-				<a href="#galeria" class="nav-link">Galeria</a>
-				<a href="#contato" class="nav-link">Contato</a>
-			</nav>
-		</header>
+    <section id="hero" class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          GRUPO<br />ESCOTEIRO<br />VALINHOS -<br />252°/SP
+        </h1>
+      </div>
 
-		<section id="hero" class="hero-section">
-			<div class="hero-overlay"></div>
-			<div class="hero-content">
-				<h1 class="hero-title">
-					GRUPO<br />ESCOTEIRO<br />VALINHOS -<br />252°/SP
-				</h1>
-			</div>
+      <div class="custom-shape-divider-bottom-1762155031">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
 
-			<div class="custom-shape-divider-bottom-1762155031">
-				<svg
-					data-name="Layer 1"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1200 120"
-					preserveAspectRatio="none"
-				>
-					<path
-						d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z"
-						class="shape-fill"
-					></path>
-				</svg>
-			</div>
-		</section>
+    <section id="about" class="about-section">
+      <button class="slide-arrow slide-arrow-left" id="prevSlide">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
 
-		<section id="about" class="about-section">
-			<button class="slide-arrow slide-arrow-left" id="prevSlide">
-				<svg
-					width="40"
-					height="40"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<polyline points="15 18 9 12 15 6"></polyline>
-				</svg>
-			</button>
+      <div class="slide-container">
+        <div class="slide active" data-slide="0">
+          <div class="slide-content">
+            <div class="slide-left">
+              <h2 class="slide-title">O que é<br />ESCOTISMO?</h2>
+              <div class="slide-image"><img src="./img/about1.png" /></div>
+            </div>
+            <p class="slide-text">
+              O Escotismo é um movimento educacional fundado em 1907 na
+              Inglaterra por Robert Baden-Powell que busca formar cidadãos
+              conscientes e responsáveis. Através de atividades práticas,
+              desafios, jogos e aventuras ao ar livre, crianças e jovens
+              aprendem valores fundamentais de cooperação, liderança, respeito
+              ao próximo e à natureza. O método escoteiro desenvolve habilidades
+              físicas, intelectuais, sociais e espirituais, preparando os jovens
+              para serem cidadãos ativos e comprometidos com a construção de um
+              mundo melhor.
+            </p>
+          </div>
+        </div>
 
-			<div class="slide-container">
-				<div class="slide active" data-slide="0">
-					<div class="slide-content">
-						<div class="slide-left">
-							<h2 class="slide-title">O que é<br />ESCOTISMO?</h2>
-							<div class="slide-image"><img src="./img/about1.png" /></div>
-						</div>
-						<p class="slide-text">
-							O Escotismo é um movimento educacional fundado em 1907 na
-							Inglaterra por Robert Baden-Powell que busca formar cidadãos
-							conscientes e responsáveis. Através de atividades práticas,
-							desafios, jogos e aventuras ao ar livre, crianças e jovens
-							aprendem valores fundamentais de cooperação, liderança, respeito
-							ao próximo e à natureza. O método escoteiro desenvolve habilidades
-							físicas, intelectuais, sociais e espirituais, preparando os jovens
-							para serem cidadãos ativos e comprometidos com a construção de um
-							mundo melhor.
-						</p>
-					</div>
-				</div>
+        <div class="slide" data-slide="1">
+          <div class="slide-content">
+            <div class="slide-left">
+              <h2 class="slide-title">História do<br />ESCOTISMO</h2>
+              <div class="slide-image"><img src="./img/about1.png" /></div>
+            </div>
+            <p class="slide-text">
+              Fundado por Robert Baden-Powell em 1907, o movimento escoteiro
+              começou com um acampamento experimental na Ilha de Brownsea, na
+              Inglaterra, reunindo 20 jovens de diferentes classes sociais. O
+              sucesso dessa experiência levou Baden-Powell a escrever "Escotismo
+              para Rapazes", que se tornou um dos livros mais vendidos do século
+              XX. Hoje, o Escotismo está presente em mais de 170 países e
+              territórios, impactando milhões de jovens com seus valores de
+              cidadania, aventura, fraternidade e compromisso com a comunidade.
+              O movimento continua crescendo e se adaptando aos desafios
+              contemporâneos.
+            </p>
+          </div>
+        </div>
 
-				<div class="slide" data-slide="1">
-					<div class="slide-content">
-						<div class="slide-left">
-							<h2 class="slide-title">História do<br />ESCOTISMO</h2>
-							<div class="slide-image"><img src="./img/about1.png" /></div>
-						</div>
-						<p class="slide-text">
-							Fundado por Robert Baden-Powell em 1907, o movimento escoteiro
-							começou com um acampamento experimental na Ilha de Brownsea, na
-							Inglaterra, reunindo 20 jovens de diferentes classes sociais. O
-							sucesso dessa experiência levou Baden-Powell a escrever "Escotismo
-							para Rapazes", que se tornou um dos livros mais vendidos do século
-							XX. Hoje, o Escotismo está presente em mais de 170 países e
-							territórios, impactando milhões de jovens com seus valores de
-							cidadania, aventura, fraternidade e compromisso com a comunidade.
-							O movimento continua crescendo e se adaptando aos desafios
-							contemporâneos.
-						</p>
-					</div>
-				</div>
+        <div class="slide" data-slide="2">
+          <div class="slide-content">
+            <div class="slide-left">
+              <h2 class="slide-title">Marcos<br />IMPORTANTES</h2>
+              <div class="slide-image"><img src="./img/about1.png" /></div>
+            </div>
+            <div class="slide-text">
+              <p>
+                <strong>1907</strong> - Primeiro acampamento escoteiro na Ilha
+                de Brownsea, Inglaterra, marca o nascimento oficial do movimento
+              </p>
+              <p>
+                <strong>1908</strong> - Publicação de "Escotismo para Rapazes",
+                obra fundamental que difundiu o método escoteiro pelo mundo
+              </p>
+              <p>
+                <strong>1910</strong> - Fundação das Escoteiras (Girl Guides),
+                garantindo que meninas também pudessem participar do movimento
+              </p>
+              <p>
+                <strong>1920</strong> - Realização do primeiro Jamboree Mundial
+                em Londres, reunindo escoteiros de diversos países
+              </p>
+              <p>
+                <strong>1924</strong> - Escotismo chega oficialmente ao Brasil,
+                iniciando uma trajetória de mais de 100 anos no país
+              </p>
+              <p>
+                <strong>Hoje</strong> - Mais de 50 milhões de membros ativos em
+                170 países, tornando-se um dos maiores movimentos juvenis do
+                mundo
+              </p>
+            </div>
+          </div>
+        </div>
 
-				<div class="slide" data-slide="2">
-					<div class="slide-content">
-						<div class="slide-left">
-							<h2 class="slide-title">Marcos<br />IMPORTANTES</h2>
-							<div class="slide-image"><img src="./img/about1.png" /></div>
-						</div>
-						<div class="slide-text">
-							<p>
-								<strong>1907</strong> - Primeiro acampamento escoteiro na Ilha
-								de Brownsea, Inglaterra, marca o nascimento oficial do movimento
-							</p>
-							<p>
-								<strong>1908</strong> - Publicação de "Escotismo para Rapazes",
-								obra fundamental que difundiu o método escoteiro pelo mundo
-							</p>
-							<p>
-								<strong>1910</strong> - Fundação das Escoteiras (Girl Guides),
-								garantindo que meninas também pudessem participar do movimento
-							</p>
-							<p>
-								<strong>1920</strong> - Realização do primeiro Jamboree Mundial
-								em Londres, reunindo escoteiros de diversos países
-							</p>
-							<p>
-								<strong>1924</strong> - Escotismo chega oficialmente ao Brasil,
-								iniciando uma trajetória de mais de 100 anos no país
-							</p>
-							<p>
-								<strong>Hoje</strong> - Mais de 50 milhões de membros ativos em
-								170 países, tornando-se um dos maiores movimentos juvenis do
-								mundo
-							</p>
-						</div>
-					</div>
-				</div>
+        <div class="slide" data-slide="3">
+          <div class="slide-content">
+            <div class="slide-left">
+              <h2 class="slide-title">Robert<br />BADEN-POWELL</h2>
+              <div class="slide-image"><img src="./img/about1.png" /></div>
+            </div>
+            <p class="slide-text">
+              Robert Stephenson Smyth Baden-Powell (1857-1941) foi um militar
+              britânico, escritor e fundador do Movimento Escoteiro Mundial.
+              Herói da Guerra dos Bôeres na África do Sul, B-P (como era
+              carinhosamente chamado) percebeu que os jovens precisavam de uma
+              educação prática e voltada para valores. Sua visão revolucionária
+              de educação através da natureza, do aprender fazendo e do
+              desenvolvimento do caráter transformou a forma de educar jovens em
+              todo o mundo. Baden-Powell dedicou os últimos 30 anos de sua vida
+              ao crescimento do Escotismo, deixando um legado que inspira
+              milhões de pessoas até hoje.
+            </p>
+          </div>
+        </div>
 
-				<div class="slide" data-slide="3">
-					<div class="slide-content">
-						<div class="slide-left">
-							<h2 class="slide-title">Robert<br />BADEN-POWELL</h2>
-							<div class="slide-image"><img src="./img/about1.png" /></div>
-						</div>
-						<p class="slide-text">
-							Robert Stephenson Smyth Baden-Powell (1857-1941) foi um militar
-							britânico, escritor e fundador do Movimento Escoteiro Mundial.
-							Herói da Guerra dos Bôeres na África do Sul, B-P (como era
-							carinhosamente chamado) percebeu que os jovens precisavam de uma
-							educação prática e voltada para valores. Sua visão revolucionária
-							de educação através da natureza, do aprender fazendo e do
-							desenvolvimento do caráter transformou a forma de educar jovens em
-							todo o mundo. Baden-Powell dedicou os últimos 30 anos de sua vida
-							ao crescimento do Escotismo, deixando um legado que inspira
-							milhões de pessoas até hoje.
-						</p>
-					</div>
-				</div>
+        <div class="slide" data-slide="4">
+          <div class="slide-content">
+            <div class="slide-left">
+              <h2 class="slide-title">História do<br />GEV 252°/SP</h2>
+              <div class="slide-image"><img src="./img/about1.png" /></div>
+            </div>
+            <p class="slide-text">
+              O Grupo Escoteiro Valinhos 252°/SP tem uma história rica e
+              significativa na comunidade de Valinhos. Fundado há décadas, nosso
+              grupo tem sido um pilar fundamental na formação de gerações de
+              jovens comprometidos com os valores escoteiros de fraternidade,
+              lealdade e serviço ao próximo. Nossa sede em Valinhos/SP é mais do
+              que um local de encontros: é um verdadeiro espaço de aprendizado,
+              aventura, desenvolvimento pessoal e amizade duradoura. Ao longo
+              dos anos, formamos líderes, construímos memórias inesquecíveis e
+              mantivemos viva a chama do Escotismo, sempre trabalhando para
+              deixar o mundo melhor do que o encontramos.
+            </p>
+          </div>
+        </div>
+      </div>
 
-				<div class="slide" data-slide="4">
-					<div class="slide-content">
-						<div class="slide-left">
-							<h2 class="slide-title">História do<br />GEV 252°/SP</h2>
-							<div class="slide-image"><img src="./img/about1.png" /></div>
-						</div>
-						<p class="slide-text">
-							O Grupo Escoteiro Valinhos 252°/SP tem uma história rica e
-							significativa na comunidade de Valinhos. Fundado há décadas, nosso
-							grupo tem sido um pilar fundamental na formação de gerações de
-							jovens comprometidos com os valores escoteiros de fraternidade,
-							lealdade e serviço ao próximo. Nossa sede em Valinhos/SP é mais do
-							que um local de encontros: é um verdadeiro espaço de aprendizado,
-							aventura, desenvolvimento pessoal e amizade duradoura. Ao longo
-							dos anos, formamos líderes, construímos memórias inesquecíveis e
-							mantivemos viva a chama do Escotismo, sempre trabalhando para
-							deixar o mundo melhor do que o encontramos.
-						</p>
-					</div>
-				</div>
-			</div>
+      <button class="slide-arrow slide-arrow-right" id="nextSlide">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
 
-			<button class="slide-arrow slide-arrow-right" id="nextSlide">
-				<svg
-					width="40"
-					height="40"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<polyline points="9 18 15 12 9 6"></polyline>
-				</svg>
-			</button>
+      <div class="slide-indicators" id="slideIndicators"></div>
+    </section>
 
-			<div class="slide-indicators" id="slideIndicators"></div>
-		</section>
+    <section id="ge-valinhos" class="ge-valinhos-section">
+      <div class="custom-shape-divider-top-1762154312">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
 
-		<section id="ge-valinhos" class="ge-valinhos-section">
-			<div class="custom-shape-divider-top-1762154312">
-				<svg
-					data-name="Layer 1"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 1200 120"
-					preserveAspectRatio="none"
-				>
-					<path
-						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-						class="shape-fill"
-					></path>
-				</svg>
-			</div>
+      <h2 class="ge-title">GE Valinhos</h2>
 
-			<h2 class="ge-title">GE Valinhos</h2>
+      <button class="carousel-arrow carousel-arrow-left" id="prevCard">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
 
-			<button class="carousel-arrow carousel-arrow-left" id="prevCard">
-				<svg
-					width="40"
-					height="40"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<polyline points="15 18 9 12 15 6"></polyline>
-				</svg>
-			</button>
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="./img/ge1.png" alt="Sobre o GE Valinhos" />
+            </div>
+            <div class="card-text">
+              <h3>Sobre Nós</h3>
+              <p>
+                O Grupo Escoteiro Valinhos 252°/SP é uma instituição dedicada à
+                formação integral de crianças e jovens através do método
+                escoteiro, promovendo valores de cidadania, respeito e trabalho
+                em equipe em um ambiente acolhedor e educativo.
+              </p>
+            </div>
+          </div>
 
-			<div class="carousel-container">
-				<div class="carousel-track" id="carouselTrack">
-					<div class="carousel-card">
-						<div class="card-image">
-							<img src="./img/ge1.png" alt="Sobre o GE Valinhos" />
-						</div>
-						<div class="card-text">
-							<h3>Sobre Nós</h3>
-							<p>
-								O Grupo Escoteiro Valinhos 252°/SP é uma instituição dedicada à
-								formação integral de crianças e jovens através do método
-								escoteiro, promovendo valores de cidadania, respeito e trabalho
-								em equipe em um ambiente acolhedor e educativo.
-							</p>
-						</div>
-					</div>
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="./img/ge2.png" alt="Localização" />
+            </div>
+            <div class="card-text">
+              <h3>Nossa Localização</h3>
+              <p>
+                Situada em Valinhos, São Paulo, nossa sede oferece uma
+                infraestrutura completa com espaços para atividades ao ar livre,
+                salas de reunião e áreas de convivência, proporcionando o
+                ambiente perfeito para o desenvolvimento das atividades
+                escoteiras.
+              </p>
+            </div>
+          </div>
 
-					<div class="carousel-card">
-						<div class="card-image">
-							<img src="./img/ge2.png" alt="Localização" />
-						</div>
-						<div class="card-text">
-							<h3>Nossa Localização</h3>
-							<p>
-								Situada em Valinhos, São Paulo, nossa sede oferece uma
-								infraestrutura completa com espaços para atividades ao ar livre,
-								salas de reunião e áreas de convivência, proporcionando o
-								ambiente perfeito para o desenvolvimento das atividades
-								escoteiras.
-							</p>
-						</div>
-					</div>
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="./img/ge3.png" alt="História" />
+            </div>
+            <div class="card-text">
+              <h3>Nossa História</h3>
+              <p>
+                Com décadas de tradição, o GE Valinhos 252°/SP vem transformando
+                vidas através do escotismo, formando gerações de cidadãos
+                conscientes e líderes comprometidos com a construção de uma
+                sociedade mais justa e fraterna.
+              </p>
+            </div>
+          </div>
 
-					<div class="carousel-card">
-						<div class="card-image">
-							<img src="./img/ge3.png" alt="História" />
-						</div>
-						<div class="card-text">
-							<h3>Nossa História</h3>
-							<p>
-								Com décadas de tradição, o GE Valinhos 252°/SP vem transformando
-								vidas através do escotismo, formando gerações de cidadãos
-								conscientes e líderes comprometidos com a construção de uma
-								sociedade mais justa e fraterna.
-							</p>
-						</div>
-					</div>
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="./img/ge4.png" alt="Atividades" />
+            </div>
+            <div class="card-text">
+              <h3>Nossas Atividades</h3>
+              <p>
+                Realizamos acampamentos, jogos cooperativos, projetos
+                comunitários, atividades esportivas e culturais que desenvolvem
+                habilidades práticas, sociais e de liderança em nossos membros
+                de todas as idades.
+              </p>
+            </div>
+          </div>
 
-					<div class="carousel-card">
-						<div class="card-image">
-							<img src="./img/ge4.png" alt="Atividades" />
-						</div>
-						<div class="card-text">
-							<h3>Nossas Atividades</h3>
-							<p>
-								Realizamos acampamentos, jogos cooperativos, projetos
-								comunitários, atividades esportivas e culturais que desenvolvem
-								habilidades práticas, sociais e de liderança em nossos membros
-								de todas as idades.
-							</p>
-						</div>
-					</div>
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="./img/ge5.png" alt="Ramos" />
+            </div>
+            <div class="card-text">
+              <h3>Nossos Ramos</h3>
+              <p>
+                Atendemos jovens dos 6,5 aos 21 anos através dos ramos Lobinho,
+                Escoteiro, Sênior e Pioneiro, cada um com programa educativo
+                específico adaptado à faixa etária e desenvolvimento dos
+                participantes.
+              </p>
+            </div>
+          </div>
 
-					<div class="carousel-card">
-						<div class="card-image">
-							<img src="./img/ge5.png" alt="Ramos" />
-						</div>
-						<div class="card-text">
-							<h3>Nossos Ramos</h3>
-							<p>
-								Atendemos jovens dos 6,5 aos 21 anos através dos ramos Lobinho,
-								Escoteiro, Sênior e Pioneiro, cada um com programa educativo
-								específico adaptado à faixa etária e desenvolvimento dos
-								participantes.
-							</p>
-						</div>
-					</div>
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="./img/ge6.png" alt="Comunidade" />
+            </div>
+            <div class="card-text">
+              <h3>Impacto na Comunidade</h3>
+              <p>
+                Mantemos forte conexão com a comunidade de Valinhos através de
+                projetos sociais, campanhas de solidariedade e ações ambientais,
+                sempre trabalhando para deixar o mundo melhor do que o
+                encontramos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-					<div class="carousel-card">
-						<div class="card-image">
-							<img src="./img/ge6.png" alt="Comunidade" />
-						</div>
-						<div class="card-text">
-							<h3>Impacto na Comunidade</h3>
-							<p>
-								Mantemos forte conexão com a comunidade de Valinhos através de
-								projetos sociais, campanhas de solidariedade e ações ambientais,
-								sempre trabalhando para deixar o mundo melhor do que o
-								encontramos.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+      <button class="carousel-arrow carousel-arrow-right" id="nextCard">
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
 
-			<button class="carousel-arrow carousel-arrow-right" id="nextCard">
-				<svg
-					width="40"
-					height="40"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<polyline points="9 18 15 12 9 6"></polyline>
-				</svg>
-			</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </section>
 
-			<div class="carousel-dots" id="carouselDots"></div>
-		</section>
+    <section id="evolucao" class="evolucao-section">
+      <h2 class="evolucao-title">EVOLUÇÃO</h2>
 
-		<section id="evolucao" class="evolucao-section">
-			<h2 class="evolucao-title">EVOLUÇÃO</h2>
+      <div class="evolucao-content"></div>
 
-			<div class="evolucao-content"></div>
+      <div class="timeline-container">
+        <button class="timeline-arrow timeline-arrow-left" id="prevYear">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
 
-			<div class="timeline-container">
-				<button class="timeline-arrow timeline-arrow-left" id="prevYear">
-					<svg
-						width="40"
-						height="40"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<polyline points="15 18 9 12 15 6"></polyline>
-					</svg>
-				</button>
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div class="timeline-track" id="timelineTrack"></div>
+        </div>
 
-				<div class="timeline-wrapper">
-					<div class="timeline-line"></div>
-					<div class="timeline-track" id="timelineTrack"></div>
-				</div>
+        <button class="timeline-arrow timeline-arrow-right" id="nextYear">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <div class="custom-shape-divider-bottom-1762193737">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
 
-				<button class="timeline-arrow timeline-arrow-right" id="nextYear">
-					<svg
-						width="40"
-						height="40"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<polyline points="9 18 15 12 9 6"></polyline>
-					</svg>
-				</button>
-			</div>
-		</section>
-		<div class="custom-shape-divider-bottom-1762193737">
-			<svg
-				data-name="Layer 1"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 1200 120"
-				preserveAspectRatio="none"
-			>
-				<path
-					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-					class="shape-fill"
-				></path>
-			</svg>
-		</div>
+    <section id="calendario" class="calendario-section">
+      <h2 class="calendario-title">Calendário de atividades</h2>
 
-		<section id="calendario" class="calendario-section">
-			<h2 class="calendario-title">Calendário de atividades</h2>
+      <div class="eventos-grid" id="eventosGrid"></div>
 
-			<div class="eventos-grid" id="eventosGrid"></div>
+      <div class="links-externos">
+        <a
+          href="https://paxtu.escoteiros.org.br/"
+          target="_blank"
+          class="link-card paxtu"
+        >
+          <div class="link-content">
+            <h3>PAXTU</h3>
+            <button class="link-button">Acessar</button>
+          </div>
+        </a>
+        <a
+          href="https://www.escoteiros.org.br/mappa-jovem/"
+          target="_blank"
+          class="link-card mappa"
+        >
+          <div class="link-content">
+            <h3>Mappa Jovem</h3>
+            <button class="link-button">Acessar</button>
+          </div>
+        </a>
+        <a
+          href="https://www.escoteiros.org.br"
+          target="_blank"
+          class="link-card associacoes"
+        >
+          <div class="link-content">
+            <h3>Associações</h3>
+            <button class="link-button">Acessar</button>
+          </div>
+        </a>
+      </div>
+    </section>
 
-			<div class="links-externos">
-				<a href="https://www.paxtu.org" target="_blank" class="link-card">
-					<div class="link-content">
-						<h3>PAXTU</h3>
-						<button class="link-button">Acessar</button>
-					</div>
-				</a>
-				<a
-					href="https://www.escoteiros.org.br/mappa-jovem/"
-					target="_blank"
-					class="link-card"
-				>
-					<div class="link-content">
-						<h3>Mappa Jovem</h3>
-						<button class="link-button">Acessar</button>
-					</div>
-				</a>
-				<a
-					href="https://www.escoteiros.org.br"
-					target="_blank"
-					class="link-card"
-				>
-					<div class="link-content">
-						<h3>Associações</h3>
-						<button class="link-button">Acessar</button>
-					</div>
-				</a>
-			</div>
-		</section>
+    <section id="galeria" class="galeria-section">
+      <div class="galeria-header">
+        <h2 class="galeria-title">Galeria de Fotos e Vídeos</h2>
+        <p class="galeria-subtitle">
+          Reviva os momentos mais marcantes do Grupo Escoteiro Valinhos em
+          atividades, eventos e celebrações.
+        </p>
+      </div>
 
-		<section id="galeria" class="galeria-section">
-			<h2 class="galeria-title">Galeria de Fotos e Vídeos</h2>
+      <div class="galeria-carousel">
+        <button
+          class="galeria-arrow galeria-arrow-left"
+          id="prevMedia"
+          aria-label="Ver mídia anterior"
+        >
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
 
-			<div class="galeria-container">
-				<button class="galeria-arrow galeria-arrow-left" id="prevGaleria">
-					<svg
-						width="40"
-						height="40"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<polyline points="15 18 9 12 15 6"></polyline>
-					</svg>
-				</button>
+        <div class="galeria-window">
+          <div class="galeria-track" id="galeriaTrack">
+            <article class="galeria-item active" aria-hidden="false">
+              <div class="galeria-media">
+                <img
+                  src="./img/hero-img.jpg"
+                  alt="Integrantes do grupo na abertura do ciclo escoteiro"
+                />
+              </div>
+              <div class="galeria-info">
+                <h3>Abertura do Ciclo Escoteiro</h3>
+                <p class="galeria-date">24 de fevereiro de 2024</p>
+                <p class="galeria-description">
+                  Encontro com todos os ramos para celebrar o início das
+                  atividades de 2024, com jogos cooperativos e cerimônia de
+                  bandeira.
+                </p>
+              </div>
+            </article>
 
-				<div class="galeria-track" id="galeriaTrack"></div>
+            <article class="galeria-item video">
+              <div class="galeria-media">
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/wM2T0KHL7hU?enablejsapi=1"
+                    title="Acampamento de Outono 2024"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    data-yt
+                  ></iframe>
+                </div>
+              </div>
+              <div class="galeria-info">
+                <h3>Acampamento de Outono</h3>
+                <p class="galeria-date">13 de abril de 2024</p>
+                <p class="galeria-description">
+                  Vídeo com os melhores momentos do acampamento de integração
+                  entre os ramos Escoteiro e Sênior, com trilhas e oficinas de
+                  pioneiria.
+                </p>
+              </div>
+            </article>
 
-				<button class="galeria-arrow galeria-arrow-right" id="nextGaleria">
-					<svg
-						width="40"
-						height="40"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<polyline points="9 18 15 12 9 6"></polyline>
-					</svg>
-				</button>
-			</div>
+            <article class="galeria-item">
+              <div class="galeria-media">
+                <img
+                  src="./img/about1.png"
+                  alt="Voluntários preparando arrecadação de alimentos"
+                />
+              </div>
+              <div class="galeria-info">
+                <h3>Mutirão Solidário</h3>
+                <p class="galeria-date">25 de maio de 2024</p>
+                <p class="galeria-description">
+                  Jovens e adultos voluntários separando e distribuindo doações
+                  arrecadadas na campanha de inverno para famílias da
+                  comunidade.
+                </p>
+              </div>
+            </article>
 
-			<div class="galeria-indicators" id="galeriaIndicators"></div>
+            <article class="galeria-item video">
+              <div class="galeria-media">
+                <div class="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/rsxQM7KGUX0?enablejsapi=1"
+                    title="Cerimônia de Promessa Escoteira"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                    data-yt
+                  ></iframe>
+                </div>
+              </div>
+              <div class="galeria-info">
+                <h3>Promessa Escoteira</h3>
+                <p class="galeria-date">6 de julho de 2024</p>
+                <p class="galeria-description">
+                  Cerimônia especial com familiares e amigos acompanhando novos
+                  integrantes assumindo a Promessa Escoteira.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
 
-			<div class="video-modal" id="videoModal">
-				<button class="video-modal-close" onclick="closeVideoModal()">×</button>
-				<div class="video-modal-content">
-					<video id="modalVideo" controls></video>
-				</div>
-			</div>
-		</section>
+        <button
+          class="galeria-arrow galeria-arrow-right"
+          id="nextMedia"
+          aria-label="Ver próxima mídia"
+        >
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
 
-		<section id="contato" class="contato-section">
-			<div class="contato-container">
-				<div class="contato-left">
-					<h2 class="contato-title">Entre em<br />Contato</h2>
+      <div class="galeria-dots" id="galeriaDots"></div>
+    </section>
 
-					<div class="contato-address">
-						Avenida Joaquim Alves Correa, 3839<br />
-						Jardim Santo Antonio<br />
-						Valinhos - SP, Brasil
-					</div>
-				</div>
+    <section id="doacao" class="doacao-section">
+      <div class="doacao-wrapper">
+        <div class="doacao-content">
+          <div class="doacao-left">
+            <h2 class="doacao-title">
+              Nos ajude a construir os líderes de amanhã!
+            </h2>
+            <p class="doacao-subtitle">Invista em Aventura e Cidadania.</p>
 
-				<div class="contato-right">
-					<a
-						href="https://wa.me/5519999999999"
-						target="_blank"
-						class="info-item"
-					>
-						<div class="info-item-icon">📱</div>
-						<div class="info-item-text">
-							<div class="info-item-label">Número de Telefone</div>
-							<div class="info-item-value">(19) 99999-9999</div>
-						</div>
-					</a>
+            <div class="doacao-impact">
+              <h3>O Impacto de Sua Doação</h3>
+              <p>
+                Cada contribuição fortalece nossa missão de empoderar jovens com
+                habilidades essenciais para a vida, senso de comunidade e
+                compromisso com a sociedade. Você ajuda a manter atividades,
+                materiais e projetos que transformam vidas.
+              </p>
+            </div>
 
-					<a
-						href="https://www.facebook.com/gevalinhos252/"
-						target="_blank"
-						class="info-item"
-					>
-						<div class="info-item-icon">📘</div>
-						<div class="info-item-text">
-							<div class="info-item-label">Link do Facebook</div>
-							<div class="info-item-value">@gevalinhos252</div>
-						</div>
-					</a>
+            <div class="doacao-note">
+              Observação: A doação não contribui ao desconto em Imposto de
+              Renda.
+            </div>
+          </div>
 
-					<a
-						href="https://www.instagram.com/ge.valinhos/"
-						target="_blank"
-						class="info-item"
-					>
-						<div class="info-item-icon">📷</div>
-						<div class="info-item-text">
-							<div class="info-item-label">@ do Instagram</div>
-							<div class="info-item-value">@ge.valinhos</div>
-						</div>
-					</a>
+          <div class="doacao-right">
+            <h3 class="doacao-group">Grupo Escoteiro Valinhos</h3>
+            <div class="doacao-qr" aria-hidden="true">
+              <div class="doacao-qr-placeholder"></div>
+            </div>
+            <div class="doacao-pix">
+              <h4>Doe via PIX</h4>
+              <p>Escaneie o QR Code com o aplicativo de seu banco.</p>
+              <p class="doacao-cnpj">CNPJ: <span>XX.XXX.XXX/0001-XX</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<a href="mailto:diretoria2324@gmail.com" class="info-item">
-						<div class="info-item-icon">✉️</div>
-						<div class="info-item-text">
-							<div class="info-item-label">Email</div>
-							<div class="info-item-value">diretoria2324@gmail.com</div>
-						</div>
-					</a>
-				</div>
+    <section id="redes" class="redes-section">
+      <div class="redes-wrapper">
+        <div class="redes-content">
+          <div class="redes-map">
+            <iframe
+              src="https://maps.google.com/maps?q=Grupo%20Escoteiro%20Valinhos%20252&amp;z=15&amp;output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização do Grupo Escoteiro Valinhos"
+            ></iframe>
+          </div>
 
-				<div class="contato-qrcode">
-					<h3 class="qrcode-title">WhatsApp<br />Direto</h3>
+          <div class="redes-info">
+            <h2 class="redes-title">Conecte-se com o GE Valinhos</h2>
+            <p class="redes-description">
+              Fique por dentro das atividades, eventos e campanhas solidárias do
+              grupo. Escolha a rede social de sua preferência para acompanhar
+              tudo de perto.
+            </p>
 
-					<div class="qrcode-container">
-						<img
-							src="./img/qrcode-whatsapp.png"
-							alt="QR Code WhatsApp"
-							onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
-						/>
-						<div class="qrcode-placeholder" style="display: none">📱</div>
-					</div>
+            <div class="redes-list">
+              <a
+                class="social-card instagram"
+                href="https://www.instagram.com/ge.valinhos/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./icons/instagram.png"
+                  alt="Instagram"
+                />
+                <div class="social-text">
+                  <strong>Instagram</strong>
+                  <span>@ge.valinhos</span>
+                </div>
+                <span class="social-cta">Seguir</span>
+              </a>
 
-					<p class="qrcode-description">
-						Aponte a câmera do seu celular para o QR Code e fale conosco.
-					</p>
-				</div>
-			</div>
-		</section>
+              <a
+                class="social-card facebook"
+                href="https://www.facebook.com/gevalinhos252/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./icons/facebook.png"
+                  alt="Facebook"
+                />
+                <div class="social-text">
+                  <strong>Facebook</strong>
+                  <span>/gevalinhos252</span>
+                </div>
+                <span class="social-cta">Curtir</span>
+              </a>
 
-		<footer class="footer">
-			<div class="footer-content">
-				<div class="footer-brand">
-					<div class="footer-logo">Grupo Escoteiro Valinhos</div>
-					<p class="footer-description">
-						Formando jovens para um mundo melhor há décadas. Através do método
-						escoteiro, desenvolvemos cidadãos conscientes, responsáveis e
-						comprometidos com a sociedade.
-					</p>
-					<div class="footer-social">
-						<a
-							href="https://wa.me/5519999999999"
-							target="_blank"
-							class="footer-social-link"
-							title="WhatsApp"
-							>📱</a
-						>
-						<a
-							href="https://www.facebook.com/gevalinhos252/"
-							target="_blank"
-							class="footer-social-link"
-							title="Facebook"
-							>📘</a
-						>
-						<a
-							href="https://www.instagram.com/ge.valinhos/"
-							target="_blank"
-							class="footer-social-link"
-							title="Instagram"
-							>📷</a
-						>
-						<a
-							href="mailto:diretoria2324@gmail.com"
-							class="footer-social-link"
-							title="Email"
-							>✉️</a
-						>
-					</div>
-				</div>
+              <a
+                class="social-card whatsapp"
+                href="https://wa.me/5519999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="social-icon"
+                  src="./icons/whatsapp.png"
+                  alt="WhatsApp"
+                />
+                <div class="social-text">
+                  <strong>WhatsApp</strong>
+                  <span>(19) 99999-8888</span>
+                </div>
+                <span class="social-cta">Conversar</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<div class="footer-column">
-					<h3>Links Rápidos</h3>
-					<ul class="footer-links">
-						<li><a href="#hero">Início</a></li>
-						<li><a href="#about">Sobre</a></li>
-						<li><a href="#ge-valinhos">GE Valinhos</a></li>
-						<li><a href="#evolucao">Evolução</a></li>
-					</ul>
-				</div>
+    <footer class="footer">
+      <div class="footer-accent">
+        <div class="footer-pill"></div>
+      </div>
 
-				<div class="footer-column">
-					<h3>Recursos</h3>
-					<ul class="footer-links">
-						<li><a href="#calendario">Calendário</a></li>
-						<li><a href="#galeria">Galeria</a></li>
-						<li><a href="https://www.paxtu.org" target="_blank">PAXTU</a></li>
-						<li>
-							<a
-								href="https://www.escoteiros.org.br/mappa-jovem/"
-								target="_blank"
-								>Mappa Jovem</a
-							>
-						</li>
-					</ul>
-				</div>
+      <div class="footer-main">
+        <div class="footer-column footer-about">
+          <h3>Grupo Escoteiro Valinhos</h3>
+          <div class="footer-about-text">
+            <span>Formando</span>
+            <span>Jovens</span>
+            <span>Para</span>
+            <span>Um Mundo Melhor</span>
+          </div>
+        </div>
 
-				<div class="footer-column">
-					<h3>Informações</h3>
-					<ul class="footer-links">
-						<li><a href="#contato">Contato</a></li>
-						<li>
-							<a href="https://www.escoteiros.org.br" target="_blank"
-								>Escoteiros do Brasil</a
-							>
-						</li>
-					</ul>
-				</div>
-			</div>
+        <div class="footer-column footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Sobre o Escotismo</a></li>
+            <li><a href="#ge-valinhos">GE Valinhos</a></li>
+            <li><a href="#evolucao">Evolução</a></li>
+            <li><a href="#calendario">Calendário</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#doacao">Doação</a></li>
+            <li><a href="#redes">Redes Sociais</a></li>
+          </ul>
+        </div>
 
-			<div class="footer-bottom">
-				<p>
-					&copy; <span id="currentYear"></span> Grupo Escoteiro Valinhos
-					252°/SP. Todos os direitos reservados.
-				</p>
-				<p>Venha fazer parte dessa história!</p>
-			</div>
-		</footer>
+        <div class="footer-column footer-address">
+          <h4>Nossa Sede</h4>
+          <p class="footer-te xt">
+            Av. Joaquim Alves Corrêa, 3839<br />
+            Vila Santo Antonio, Valinhos - SP<br />
+            CEP 13277-055
+          </p>
+          <img
+            src="./icons/Figoteiro.png"
+            alt="Mascote Figoteiro do Grupo Escoteiro Valinhos"
+            class="footer-mascot"
+          />
+        </div>
+      </div>
 
-		<script src="js/main.js"></script>
-		<script src="js/slider.js"></script>
-		<script src="js/carousel.js"></script>
-		<script src="js/evolucao.js"></script>
-		<script src="js/calendario.js"></script>
-		<script src="js/galeria.js"></script>
-	</body>
+      <div class="footer-social">
+        <a
+          href="https://wa.me/5519999999999"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="WhatsApp"
+        >
+          <img src="./icons/whatsapp.png" alt="WhatsApp-footer" />
+        </a>
+        <a
+          href="https://www.facebook.com/gevalinhos252/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="Facebook"
+        >
+          <img src="./icons/facebook.png" alt="Facebook-footer" />
+        </a>
+        <a
+          href="https://www.instagram.com/ge.valinhos/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-social-link"
+          aria-label="Instagram"
+        >
+          <img src="./icons/instagram.png" alt="Instagram-footer" />
+        </a>
+        <a
+          href="mailto:contato@gevalinhos.org.br"
+          class="footer-social-link"
+          aria-label="E-mail"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M3.5 5h17a1.5 1.5 0 0 1 1.5 1.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm8.5 7.21 8.06-6.31H4.94Zm0 1.88L4 8.2v9.3h16V8.2Z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2025 Grupo Escoteiro Valinhos 252°/SP. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/evolucao.js"></script>
+    <script src="js/calendario.js"></script>
+  </body>
 </html>
