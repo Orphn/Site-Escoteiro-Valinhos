@@ -444,23 +444,13 @@
     </section>
 
     <section id="galeria" class="galeria-section">
-      <div class="galeria-header">
-        <h2 class="galeria-title">Galeria de Fotos e Vídeos</h2>
-        <p class="galeria-subtitle">
-          Reviva os momentos mais marcantes do Grupo Escoteiro Valinhos em
-          atividades, eventos e celebrações.
-        </p>
-      </div>
+      <h2 class="galeria-title">Galeria de Fotos e Vídeos</h2>
 
-      <div class="galeria-carousel">
-        <button
-          class="galeria-arrow galeria-arrow-left"
-          id="prevMedia"
-          aria-label="Ver mídia anterior"
-        >
+      <div class="galeria-container">
+        <button class="galeria-arrow galeria-arrow-left" id="prevGaleria">
           <svg
-            width="36"
-            height="36"
+            width="40"
+            height="40"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -470,101 +460,12 @@
           </svg>
         </button>
 
-        <div class="galeria-window">
-          <div class="galeria-track" id="galeriaTrack">
-            <article class="galeria-item active" aria-hidden="false">
-              <div class="galeria-media">
-                <img
-                  src="./img/hero-img.jpg"
-                  alt="Integrantes do grupo na abertura do ciclo escoteiro"
-                />
-              </div>
-              <div class="galeria-info">
-                <h3>Abertura do Ciclo Escoteiro</h3>
-                <p class="galeria-date">24 de fevereiro de 2024</p>
-                <p class="galeria-description">
-                  Encontro com todos os ramos para celebrar o início das
-                  atividades de 2024, com jogos cooperativos e cerimônia de
-                  bandeira.
-                </p>
-              </div>
-            </article>
+        <div class="galeria-track" id="galeriaTrack"></div>
 
-            <article class="galeria-item video">
-              <div class="galeria-media">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/wM2T0KHL7hU?enablejsapi=1"
-                    title="Acampamento de Outono 2024"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                    data-yt
-                  ></iframe>
-                </div>
-              </div>
-              <div class="galeria-info">
-                <h3>Acampamento de Outono</h3>
-                <p class="galeria-date">13 de abril de 2024</p>
-                <p class="galeria-description">
-                  Vídeo com os melhores momentos do acampamento de integração
-                  entre os ramos Escoteiro e Sênior, com trilhas e oficinas de
-                  pioneiria.
-                </p>
-              </div>
-            </article>
-
-            <article class="galeria-item">
-              <div class="galeria-media">
-                <img
-                  src="./img/about1.png"
-                  alt="Voluntários preparando arrecadação de alimentos"
-                />
-              </div>
-              <div class="galeria-info">
-                <h3>Mutirão Solidário</h3>
-                <p class="galeria-date">25 de maio de 2024</p>
-                <p class="galeria-description">
-                  Jovens e adultos voluntários separando e distribuindo doações
-                  arrecadadas na campanha de inverno para famílias da
-                  comunidade.
-                </p>
-              </div>
-            </article>
-
-            <article class="galeria-item video">
-              <div class="galeria-media">
-                <div class="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/rsxQM7KGUX0?enablejsapi=1"
-                    title="Cerimônia de Promessa Escoteira"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                    data-yt
-                  ></iframe>
-                </div>
-              </div>
-              <div class="galeria-info">
-                <h3>Promessa Escoteira</h3>
-                <p class="galeria-date">6 de julho de 2024</p>
-                <p class="galeria-description">
-                  Cerimônia especial com familiares e amigos acompanhando novos
-                  integrantes assumindo a Promessa Escoteira.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <button
-          class="galeria-arrow galeria-arrow-right"
-          id="nextMedia"
-          aria-label="Ver próxima mídia"
-        >
+        <button class="galeria-arrow galeria-arrow-right" id="nextGaleria">
           <svg
-            width="36"
-            height="36"
+            width="40"
+            height="40"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -575,7 +476,14 @@
         </button>
       </div>
 
-      <div class="galeria-dots" id="galeriaDots"></div>
+      <div class="galeria-indicators" id="galeriaIndicators"></div>
+
+      <div class="video-modal" id="videoModal">
+        <button class="video-modal-close" onclick="closeVideoModal()">×</button>
+        <div class="video-modal-content">
+          <video id="modalVideo" controls></video>
+        </div>
+      </div>
     </section>
 
     <section id="doacao" class="doacao-section">
