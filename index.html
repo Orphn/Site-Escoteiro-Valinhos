@@ -463,6 +463,11 @@
       <h2 class="galeria-title">Galeria de Fotos e Vídeos</h2>
 
       <div class="galeria-container">
+        <div class="galeria-track" id="galeriaTrack"></div>
+      </div>
+
+      <!-- As setas e os dots foram agrupados aqui -->
+      <div class="galeria-arrows-bottom">
         <button class="galeria-arrow galeria-arrow-left" id="prevGaleria">
           <svg
             width="40"
@@ -476,7 +481,7 @@
           </svg>
         </button>
 
-        <div class="galeria-track" id="galeriaTrack"></div>
+        <div class="galeria-indicators" id="galeriaIndicators"></div>
 
         <button class="galeria-arrow galeria-arrow-right" id="nextGaleria">
           <svg
@@ -491,8 +496,6 @@
           </svg>
         </button>
       </div>
-
-      <div class="galeria-indicators" id="galeriaIndicators"></div>
 
       <div class="video-modal" id="videoModal">
         <button class="video-modal-close" onclick="closeVideoModal()">×</button>

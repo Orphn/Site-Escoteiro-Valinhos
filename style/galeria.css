@@ -225,7 +225,7 @@
   right: -20px;
 }
 
-/* Indicadores (mesma da about section) */
+/* Indicadores */
 .galeria-indicators {
   display: flex;
   gap: 15px;
@@ -305,64 +305,6 @@
 }
 
 /* Responsivo */
-@media (max-width: 1200px) {
-  .galeria-item {
-    width: 600px;
-  }
-
-  .galeria-item.left-1,
-  .galeria-item.right-1 {
-    transform: translateX(-400px) scale(0.85);
-  }
-
-  .galeria-item.right-1 {
-    transform: translateX(400px) scale(0.85);
-  }
-
-  .galeria-item.left-2,
-  .galeria-item.right-2 {
-    transform: translateX(-650px) scale(0.7);
-  }
-
-  .galeria-item.right-2 {
-    transform: translateX(650px) scale(0.7);
-  }
-}
-
-@media (max-width: 1024px) {
-  .galeria-container {
-    height: 550px;
-  }
-
-  .galeria-item {
-    width: 500px;
-  }
-
-  .galeria-media {
-    height: 350px;
-  }
-
-  .galeria-title {
-    font-size: 2.8rem;
-    padding: 15px 40px;
-  }
-
-  .galeria-item.left-1,
-  .galeria-item.right-1 {
-    transform: translateX(-350px) scale(0.8);
-  }
-
-  .galeria-item.right-1 {
-    transform: translateX(350px) scale(0.8);
-  }
-
-  .galeria-item.left-2,
-  .galeria-item.right-2 {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
 @media (max-width: 768px) {
   .galeria-section {
     padding: 60px 15px 80px;
@@ -386,22 +328,24 @@
     height: 300px;
   }
 
-  .galeria-arrow {
-    width: 50px;
-    height: 50px;
+  /* Setas posicionadas ao lado dos dots */
+  .galeria-arrows-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
   }
 
-  .galeria-arrow svg {
-    width: 30px;
-    height: 30px;
+  .galeria-arrows-bottom .galeria-arrow {
+    position: static;
+    transform: none;
+    width: 45px;
+    height: 45px;
   }
 
-  .galeria-arrow-left {
-    left: 15px;
-  }
-
-  .galeria-arrow-right {
-    right: 15px;
+  .galeria-indicators {
+    margin: 0 15px;
   }
 
   .play-icon {
@@ -449,24 +393,5 @@
 
   .galeria-description p {
     font-size: 0.9rem;
-  }
-
-  .galeria-arrow {
-    width: 45px;
-    height: 45px;
-  }
-
-  .galeria-arrow svg {
-    width: 25px;
-    height: 25px;
-  }
-
-  .galeria-indicator {
-    width: 12px;
-    height: 12px;
-  }
-
-  .galeria-indicator.active {
-    width: 40px;
   }
 }
