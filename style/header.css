@@ -82,19 +82,16 @@
 
 @media (max-width: 768px) {
   .header {
-    /* Estas regras são as mais importantes */
     top: 0;
     left: 0;
     transform: none;
     width: 100%;
-
-    /* Estas já estavam no media query, mas são importantes */
     max-width: 100vw;
-    border-radius: 0; /* Adicionado para remover cantos arredondados */
+    border-radius: 0;
   }
 
   .header-bar {
-    border-radius: 0; /* Adicionado para remover cantos arredondados */
+    border-radius: 0;
     justify-content: space-between;
     padding: 12px 20px;
     overflow: hidden;
