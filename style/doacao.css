@@ -1,5 +1,5 @@
 .doacao-section {
-  background: linear-gradient(180deg, #cfdc96 0%, #f7f9e6 45%, #ffffff 100%);
+  background: linear-gradient(180deg, #a8b968 0%, #d1dbae 45%, #ffffff 100%);
   padding: 160px 40px 140px;
 }
 
@@ -116,7 +116,8 @@
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle at 20% 20%,
       rgba(255, 255, 255, 0.6) 1px,
       transparent 1px

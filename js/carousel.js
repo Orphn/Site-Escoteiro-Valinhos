@@ -6,26 +6,29 @@ const totalCards = cards.length;
 
 // Variável para armazenar quantos cards são visíveis
 let cardsVisible = 3;
+let isMobile = false;
 
 // Função para calcular quantos cards são visíveis
 function updateCardsVisible() {
   const width = window.innerWidth;
   if (width <= 768) {
     cardsVisible = 1;
+    isMobile = true;
   } else if (width <= 1200) {
     cardsVisible = 2;
+    isMobile = false;
   } else {
     cardsVisible = 3;
+    isMobile = false;
   }
 }
 
 // Criar dots de navegação
 const dotsContainer = document.getElementById("carouselDots");
-const maxDots = totalCards - cardsVisible + 1;
 
 function createDots() {
   dotsContainer.innerHTML = "";
-  const dotsToCreate = totalCards - cardsVisible + 1;
+  const dotsToCreate = totalCards;
 
   for (let i = 0; i < dotsToCreate; i++) {
     const dot = document.createElement("div");
@@ -38,26 +41,62 @@ function createDots() {
 
 const dots = () => document.querySelectorAll(".carousel-dot");
 
-function mostrarCard(index) {
-  updateCardsVisible();
-  const maxIndex = totalCards - cardsVisible;
+// Função para atualizar o card central destacado
+function updateCenterCard() {
+  cards.forEach((card, index) => {
+    card.classList.remove("center");
+    if (index === currentCardIndex) {
+      card.classList.add("center");
+    }
+  });
+}
 
-  // Limitar o índice
-  if (index > maxIndex) {
-    currentCardIndex = maxIndex;
-  } else if (index < 0) {
+function mostrarCard(index, noTransition = false) {
+  updateCardsVisible();
+
+  // Limitar o índice com loop infinito
+  if (index >= totalCards) {
     currentCardIndex = 0;
+  } else if (index < 0) {
+    currentCardIndex = totalCards - 1;
   } else {
     currentCardIndex = index;
   }
 
-  // Calcular o deslocamento
+  // Desabilitar transição se necessário
+  if (noTransition) {
+    carouselTrack.style.transition = "none";
+  } else {
+    carouselTrack.style.transition = "transform 0.5s ease";
+  }
+
+  // Calcular o deslocamento baseado no modo (desktop ou mobile)
   const cardWidth = cards[0].offsetWidth;
-  const gap = 40;
-  const offset = -(currentCardIndex * (cardWidth + gap));
+  const gap = parseFloat(window.getComputedStyle(carouselTrack).gap);
+  let offset;
+
+  if (isMobile) {
+    // Mobile: centraliza o card atual
+    const containerWidth = document.querySelector(
+      ".carousel-container"
+    ).offsetWidth;
+    offset =
+      containerWidth / 2 - cardWidth / 2 - currentCardIndex * (cardWidth + gap);
+  } else {
+    // Desktop: mantém o card central destacado
+    const containerWidth = document.querySelector(
+      ".carousel-container"
+    ).offsetWidth;
+    const centerPosition = containerWidth / 2;
+    const cardCenter = cardWidth / 2;
+    offset = centerPosition - cardCenter - currentCardIndex * (cardWidth + gap);
+  }
 
   // Aplicar transformação
   carouselTrack.style.transform = `translateX(${offset}px)`;
+
+  // Atualizar card central destacado
+  updateCenterCard();
 
   // Atualizar dots
   dots().forEach((dot, i) => {
@@ -66,6 +105,9 @@ function mostrarCard(index) {
       dot.classList.add("active");
     }
   });
+
+  // Retornar o offset para a função de drag
+  return offset;
 }
 
 function proximoCard() {
@@ -104,62 +146,70 @@ let isDragging = false;
 let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
-let animationID = 0;
 
 carouselTrack.addEventListener("mousedown", dragStart);
-carouselTrack.addEventListener("touchstart", dragStart);
+carouselTrack.addEventListener("touchstart", dragStart, { passive: true });
 carouselTrack.addEventListener("mouseup", dragEnd);
 carouselTrack.addEventListener("touchend", dragEnd);
 carouselTrack.addEventListener("mouseleave", dragEnd);
 carouselTrack.addEventListener("mousemove", drag);
-carouselTrack.addEventListener("touchmove", drag);
+carouselTrack.addEventListener("touchmove", drag, { passive: true });
 
 function dragStart(e) {
+  if (!isMobile) return; // Só permite drag no mobile
+
   isDragging = true;
   startPos = getPositionX(e);
-  animationID = requestAnimationFrame(animation);
   carouselTrack.style.cursor = "grabbing";
+  carouselTrack.style.transition = "none";
 }
 
 function drag(e) {
-  if (isDragging) {
-    const currentPosition = getPositionX(e);
-    currentTranslate = prevTranslate + currentPosition - startPos;
-  }
+  if (!isDragging || !isMobile) return;
+
+  const currentPosition = getPositionX(e);
+  currentTranslate = prevTranslate + currentPosition - startPos;
+  carouselTrack.style.transform = `translateX(${currentTranslate}px)`;
 }
 
-function dragEnd() {
+function dragEnd(e) {
+  if (!isDragging || !isMobile) return;
+
   isDragging = false;
-  cancelAnimationFrame(animationID);
   carouselTrack.style.cursor = "grab";
+  carouselTrack.style.transition = "transform 0.5s ease";
 
   const movedBy = currentTranslate - prevTranslate;
+  const threshold = 50; // Threshold menor para mobile
 
-  // Se arrastou mais de 100px, muda de card
-  if (movedBy < -100 && currentCardIndex < totalCards - cardsVisible) {
+  // Determina a direção do swipe com loop infinito
+  if (movedBy < -threshold) {
     currentCardIndex += 1;
-  }
-
-  if (movedBy > 100 && currentCardIndex > 0) {
+    if (currentCardIndex >= totalCards) {
+      currentCardIndex = 0;
+    }
+  } else if (movedBy > threshold) {
     currentCardIndex -= 1;
+    if (currentCardIndex < 0) {
+      currentCardIndex = totalCards - 1;
+    }
   }
 
-  mostrarCard(currentCardIndex);
-  prevTranslate = currentTranslate;
+  // Ancora na posição correta
+  const finalOffset = mostrarCard(currentCardIndex);
+  prevTranslate = finalOffset;
+  currentTranslate = finalOffset;
 }
 
 function getPositionX(e) {
   return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
 }
 
-function animation() {
-  if (isDragging) requestAnimationFrame(animation);
-}
-
 // Inicializar carousel
 updateCardsVisible();
 createDots();
-mostrarCard(0);
+prevTranslate = mostrarCard(0);
+currentTranslate = prevTranslate;
 
 // Atualizar ao redimensionar
 let resizeTimer;
@@ -168,6 +218,7 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(() => {
     updateCardsVisible();
     createDots();
-    mostrarCard(currentCardIndex);
+    prevTranslate = mostrarCard(currentCardIndex);
+    currentTranslate = prevTranslate;
   }, 250);
 });

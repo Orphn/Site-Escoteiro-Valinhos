@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -24,17 +24,33 @@
     <link rel="stylesheet" href="style/calendario.css" />
   </head>
   <body>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
     <header class="header">
-      <nav class="header-bar">
-        <a href="#hero" class="nav-link active">Início</a>
-        <a href="#about" class="nav-link">Sobre o Escotismo</a>
-        <a href="#ge-valinhos" class="nav-link">GE Valinhos</a>
-        <a href="#evolucao" class="nav-link">Evolução</a>
-        <a href="#calendario" class="nav-link">Calendário</a>
-        <a href="#galeria" class="nav-link">Galeria</a>
-        <a href="#doacao" class="nav-link">Doação</a>
-        <a href="#redes" class="nav-link">Redes Sociais</a>
-      </nav>
+      <div class="header-bar">
+        <span class="header-logo">GE Valinhos</span>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 12h18M3 6h18M3 18h18"
+              stroke="white"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <nav id="navMenu">
+          <a href="#hero" class="nav-link active">Início</a>
+          <a href="#about" class="nav-link">Sobre o Escotismo</a>
+          <a href="#ge-valinhos" class="nav-link">GE Valinhos</a>
+          <a href="#evolucao" class="nav-link">Evolução</a>
+          <a href="#calendario" class="nav-link">Calendário</a>
+          <a href="#galeria" class="nav-link">Galeria</a>
+          <a href="#doacao" class="nav-link">Doação</a>
+          <a href="#redes" class="nav-link">Redes Sociais</a>
+        </nav>
+      </div>
     </header>
 
     <section id="hero" class="hero-section">
@@ -639,7 +655,7 @@
 
         <div class="footer-column footer-address">
           <h4>Nossa Sede</h4>
-          <p class="footer-te xt">
+          <p class="footer-text">
             Av. Joaquim Alves Corrêa, 3839<br />
             Vila Santo Antonio, Valinhos - SP<br />
             CEP 13277-055
@@ -695,11 +711,13 @@
 
       <div class="footer-bottom">
         <p>
-          © 2025 Grupo Escoteiro Valinhos 252°/SP. Todos os direitos reservados.
+          © 2025 Grupo Escoteiro Valinhos 252°/SP. Todos os direitos
+          reservados.
         </p>
       </div>
     </footer>
 
+    <script src="js/header.js"></script>
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/carousel.js"></script>
