@@ -51,6 +51,7 @@
   flex-direction: column;
   gap: 12px;
   align-items: center;
+  text-align: center;
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   font-weight: 700;
@@ -64,14 +65,12 @@
   padding: 8px 22px;
   border-radius: 18px;
   margin: 0;
-  background: linear-gradient(
-      145deg,
-      rgba(52, 78, 45, 0.92),
-      rgba(97, 133, 71, 0.85)
-    ),
+  background:
+    linear-gradient(145deg, rgba(52, 78, 45, 0.92), rgba(97, 133, 71, 0.85)),
     url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60")
       center/cover;
-  box-shadow: 0 12px 24px rgba(32, 51, 28, 0.4),
+  box-shadow:
+    0 12px 24px rgba(32, 51, 28, 0.4),
     inset 0 0 0 3px rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
@@ -141,7 +140,7 @@
   display: flex;
   justify-content: center;
   gap: 26px;
-  padding: 0 32px 20px;
+  padding: 8px 32px 20px;
   flex-wrap: wrap;
 }
 
@@ -152,7 +151,9 @@
   background-color: rgba(255, 255, 255, 0.2);
   display: grid;
   place-items: center;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .footer-social-link img,
@@ -200,6 +201,12 @@
   .footer-mascot {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .footer-about-text {
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 }
 

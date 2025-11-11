@@ -52,12 +52,18 @@ mobileOverlay.addEventListener("click", () => {
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
     if (window.innerWidth <= 768 && navMenu.classList.contains("active")) {
-      closeMenu(false);
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      closeMenu(true);
+      setTimeout(() => {
+        document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    } else {
+      navLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
     }
-    navLinks.forEach((l) => l.classList.remove("active"));
-    link.classList.add("active");
   });
 });
 
