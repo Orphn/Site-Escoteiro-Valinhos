@@ -240,7 +240,13 @@
   .slide-content {
     grid-template-columns: 1fr;
     gap: 30px;
-    max-height: calc(100vh - (80px + var(--controls-height)));
+    max-height: calc(100vh - (80px + var(--controls-height) + 20px));
+  }
+
+  .slide-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .slide-title {
@@ -249,14 +255,14 @@
 
   .slide-text {
     font-size: 1rem;
-    max-height: none;
+    flex-grow: 1;
+    max-height: 100%;
   }
 
   .slide-image {
-    height: 250px;
+    height: 180px;
   }
 
-  /* Ajuste para o padrão da Galeria */
   .slide-arrow {
     width: 45px;
     height: 45px;
@@ -289,16 +295,4 @@
   .indicator.active {
     width: 40px;
   }
-}
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
