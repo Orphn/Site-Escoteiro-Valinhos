@@ -51,16 +51,18 @@ const categoriasCores = {
 
 function initCalendario() {
   const grid = document.getElementById("eventosGrid");
+  const isMobile = window.innerWidth < 768;
+  const eventosParaMostrar = isMobile ? eventos.slice(0, 3) : eventos;
 
   // Se não houver eventos, mostra mensagem
-  if (eventos.length === 0) {
+  if (eventosParaMostrar.length === 0) {
     grid.innerHTML =
       '<p style="text-align: center; grid-column: 1/-1; font-size: 1.2rem; color: #666;">Nenhum evento agendado no momento.</p>';
     return;
   }
 
   // Cria um card para cada evento
-  eventos.forEach((evento) => {
+  eventosParaMostrar.forEach((evento) => {
     const card = criarEventoCard(evento);
     grid.appendChild(card);
   });
